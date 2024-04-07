@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=PT+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Wedding/RSVP - Form | Canvas</title>
+
+	<style>
+		.file-caption.icon-visible .file-caption-name {
+			font-family: 'Lato', sans-serif;
+			color: #666;
+		}
+		.form-process {
+			position: absolute;
+			-webkit-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+			background-image: none;
+		}
+
+		.form-process > div { background-color: #999;  }
+
+		.form-process,
+		#template-wedding-submitted,
+		.template-wedding-complete .form-process {
+			display: none;
+			opacity: 0;
+			background-color: rgba(255,255,255,0.7);
+		}
+
+		.template-wedding-processing .form-process {
+			display: block;
+			opacity: 1;
+		}
+
+		.divider.divider-center.divider-sm:before,
+		.divider.divider-center.divider-sm:after { border-color: #CCC; }
+
+		.btn-group label.error {
+			display: block !important;
+			text-transform: none;
+			position: absolute;
+		    bottom: -34px;
+		    left: 0;
+		    margin-bottom: 10px;
+		}
+
+		.btn-group input.valid ~ label.error,
+		.btn-group input[type="text"] ~ label.error,
+		.btn-group input[type="email"] ~ label.error,
+		.btn-group input[type="number"] ~ label.error,
+		.btn-group select ~ label.error { display: none !important; }
+
+	</style>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="full-header no-sticky">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default"  src="./images/logo.jpg" alt="Canvas Logo">
+								<img class="logo-dark" s src="./images/logo.jpg" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+
+						
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="index.html"><div>Home</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="services.html"><div>Services</div></a>
+								</li>
+								
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap bg-light">
+
+				<div class="container">
+
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-10">
+							<div class="card my-5 shadow-sm">
+								<div class="card-body p-5">
+
+									<h4 class="ls-4 text-center">Book Now</h4>
+
+									<div class="divider divider-sm divider-center text-dark"><i class="bi-heart"></i></div>
+
+							
+
+										<form class="mb-0" id="template-wedding" name="template-wedding" action="include/form.php" method="post" enctype="multipart/form-data">
+
+											<div class="row g-4">
+
+												
+													
+
+												<div class="col-12">
+													<label for="template-wedding-attending" class="mb-3">Enter your address.<small class="text-danger">*</small></label><br>
+													<input type="text" placeholder="3790 Polokwane, Limpopo, 0227, SA" style="width: 25rem;">
+													<br>
+													<br>
+													<a  href="">SELECT SERVICES</a>
+													</div>
+												</div>		
+
+										</form>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+		
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+	<script>
+		jQuery('#template-wedding').on( 'formSubmitSuccess', function(){
+			jQuery('.template-wedding-success-modal').magnificPopup('open');
+		});
+	</script>
+
+</body>
+</html>
